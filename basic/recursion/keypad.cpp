@@ -17,6 +17,6 @@ void type(string s , string ans){
 }
 
 int main(){
-  type("23456789" , "");
+  type("23" , "");
   return 0;
 }
