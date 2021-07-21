@@ -36,6 +36,15 @@ bool isPresent(Node* node,int key){
   return false;
 }
 
+bool search(Node* head,int key){
+  if(head == NULL) return false;
+  if(head->data == key){
+    return true;
+  }
+  return search(head->next,key);
+}
+
+
 void printList(Node* head){
   Node* temp = head;
   while(temp != NULL) {
@@ -55,6 +64,7 @@ int main(){
   printList(head);
   cout << isPresent(head,0) << endl;
   cout << isPresent(head,11) << endl;
+  cout << search(head,0) << endl;
 
   return 0;
 }
