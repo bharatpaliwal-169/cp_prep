@@ -27,19 +27,22 @@ vector<ll> addBig(vector<ll>& num1 , vector<ll>& num2){
   num1.insert(num1.begin(),0);
   num2.insert(num2.begin(),0);
 
-  vector<ll> carry;
-  for(ll i =0; i<len+1; i++){
-    carry.push_back(0);
-  }
+  // vector<ll> carry;
+  // for(ll i =0; i<len+1; i++){
+  //   carry.push_back(0);
+  // }
 
+  int carry = 0;
   for(ll i=len; i>=0; i--){
-    ll sum = num1[i] + num2[i] + carry[i];
+    // ll sum = num1[i] + num2[i] + carry[i];
+    ll sum = num1[i] + num2[i] + carry;
     if(sum <= 9){
       ans[i] = sum;
+      carry = 0;
     }
     
     if(sum > 9){
-      carry[i-1] = 1;
+      carry = 1;
       ans[i] = sum % 10;
     }
   }
