@@ -28,7 +28,7 @@ class Stack{
     top--;
   }
   int Top(){
-    if(top== -1) return -1;
+    if(top  == -1) return -1;
     return arr[top];
   }
   bool empty(){
