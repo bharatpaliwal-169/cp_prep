@@ -35,6 +35,35 @@ vector<int> StocksSpan(vector<int> prices){
   return result;
 }
 
+
+
+// nearest greater to left + index 
+vector<int> stockop(vector<int>arr){
+  vector<int> result;
+  stack<pair<int,int>>s;
+  for(int i = 0; i < arr.size(); i++){
+    if(s.size()==0){
+      result.push_back(-1);
+    }
+    else if(s.size()>0 and s.top().first > arr[i]){
+      result.push_back(s.top().second);
+    }
+    else if(s.size()>0 and s.top().first < arr[i]){
+      while(s.size()>0 and s.top().first < arr[i]){
+        s.pop();
+      }
+      if(s.size()==0) result.push_back(-1);
+      else result.push_back(s.top().second);
+    }
+
+    s.push({arr[i],i});
+  }
+  for(int i=0; i<result.size(); i++){
+    result[i] = i - result[i];
+  }
+  return result;
+}
+
 int main()
 {
   vector<int> prices = {100 ,80,60,70,60,75,85};
