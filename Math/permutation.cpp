@@ -17,7 +17,6 @@ int main(){
   
   sort(a.begin(), a.end());
   do{
-
     display(a);
   }while(next_permutation(a.begin(), a.end()));
   
