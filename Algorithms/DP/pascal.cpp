@@ -38,6 +38,7 @@ vector<int>result (int n){
   }
   return res[n];
 }
+
 vector<int> getRow(int n) {
     memset(dp, 0, sizeof(dp));
     return result(n);

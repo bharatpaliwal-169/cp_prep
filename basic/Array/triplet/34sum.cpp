@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+ #include <bits/stdc++.h>
 using namespace std;
 
 class Solution {
@@ -67,19 +67,12 @@ public:
             
             int val1=nums[j];
             while(j<k && nums[j]==val1) j++;
-                
-            
-              int val2=nums[k];
+            int val2=nums[k];
             while(j<k && nums[k]==val2) k--;
                 
         }
-            
-            else if(nums[i]+nums[j]+nums[k]<0)  j++;
-              
-            
-              
-            else if(nums[i]+nums[j]+nums[k]>0)  k--;
-              
+        else if(nums[i]+nums[j]+nums[k]<0)  j++;
+        else if(nums[i]+nums[j]+nums[k]>0)  k--;
     }
   }
   
