@@ -11,6 +11,7 @@ void subseq(string s, string ans){
   char ele = s[0];
   string restStr = s.substr(1);
   subseq(restStr, ans);
+  cout << ans << endl;
   subseq(restStr,(ans + ele));
 
 }
