@@ -1,4 +1,6 @@
-// count the subset with given range
+// find the min possible difference between two subset-partition of the given array.
+// given array A -> p1 , p2 mein partition karo then s1 = sum(p1) s2 = sum(p2) 
+// find best partition such that abs(s2-s1) is minimum.
 #include<bits/stdc++.h>
 using namespace std;
 
