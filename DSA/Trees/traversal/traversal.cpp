@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+// read about morris traversal
 struct Node{
   int data;
   struct Node* left;
