@@ -32,7 +32,7 @@ bool solve(Tree* root) {
         auto x = s1.top();
         // cout<<x->val<<" ";
         auto y = s2.top();
-        cout << y->val << " ";
+        // cout << y->val << " ";
         s1.pop();
         s2.pop();
         if (x->val != y->val) return false;
