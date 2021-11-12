@@ -1,8 +1,7 @@
-// Connected Rope
+
 #include<bits/stdc++.h>
 using namespace std;
 
-// approach : use min_heap to find min cost
 
 int main(){
   int n;cin >> n;
@@ -11,23 +10,26 @@ int main(){
     int x;cin >> x;
     arr.push_back(x);
   }
-  // int k;cin >> k;
-  
-  priority_queue<int,vector<int>,greater<int> > min_heap;
-  // priority_queue<pair<int,int>> max_heap;
-  int cost = 0;
-  for(auto i : arr){
-    min_heap.push(i);
-  }
-  while(min_heap.size() >= 2){
-    int first = min_heap.top();
-    min_heap.pop();
-    int second = min_heap.top();
-    min_heap.pop();
+  int x;cin >> x;
 
-    cost += first+second;
-    min_heap.push(first+second);
+  vector<pair<int,int>> num;
+  for(int i=0; i<n; i++){
+    num.push_back({arr[i],i});
   }
-  cout << cost << endl;
+
+  sort(num.begin(), num.end());
+  int l=0,r=num.size()-1;
+  while(l<r){
+    int sum = num[l].first + num[r].first;
+
+    if(sum == x){
+      cout << num[l].second << " " << num[r].second << endl;
+      return 0;
+    } 
+    if(sum > x) r--;
+    else l++;
+  }
+
+  cout << "false" << endl;
   return 0;
 }
