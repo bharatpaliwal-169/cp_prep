@@ -1,4 +1,4 @@
-//next larget element 
+//next largest element 
 #include <bits/stdc++.h>
 using namespace std;
 //ignore the duplicates in the input array.
@@ -6,16 +6,17 @@ vector<int> nle(vector<int>& nums){
   vector<int> ans;
   stack<int> s;
   for(int i = nums.size()-1; i >= 0;i--){
-    if(s.size() == 0){
+    if(s.empty()){
       ans.push_back(-1);
     }
-    else if( (s.size() != 0||!s.empty()) && s.top() > nums[i]){
+    else if( !s.empty() && s.top() > nums[i]){
       ans.push_back(s.top());
     }
     else if((s.size() != 0||!s.empty()) && s.top() < nums[i]){
       while((s.size() != 0||!s.empty()) && s.top() < nums[i]){
         s.pop();
       }
+      
       if(s.empty()){
         ans.push_back(-1);
       }
