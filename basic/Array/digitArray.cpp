@@ -23,6 +23,15 @@ vector<int> num_to_array(int n){
 }
 
 
+int count_digit_in_num(int n){
+  int count = 0;
+  // while(n!=0){
+  //   n = n/10;
+  //   count++;
+  // }
+  count = floor(log10(n)) + 1;
+}
+
 int main()
 {
   ios_base::sync_with_stdio(false);

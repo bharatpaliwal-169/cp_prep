@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void subseq(string s, string ans){
+void substr(string s, string ans){
   if(s.length() == 0){
     cout << ans << endl;
     return;
@@ -10,14 +10,12 @@ void subseq(string s, string ans){
 
   char ele = s[0];
   string restStr = s.substr(1);
-  subseq(restStr, ans);
+  substr(restStr, ans);
   cout << ans << endl;
-  subseq(restStr,(ans + ele));
-
+  substr(restStr,(ans + ele));
 }
-
 int main(){
-  subseq("ABC" , "");
+  substr("ABC" , "");
   return 0;
 }
 
