@@ -8,8 +8,8 @@ int main(){
   // char c = 66 + 32;
   // cout << c << endl;
   
-  // int c = 'B' + 32;
-  // cout << c << endl;
+  int c = 'a' - 97;
+  cout << c << endl;
   
   // char c = 'A';
   // for(int i = 0; i < 26; i++){
@@ -26,8 +26,8 @@ int main(){
   //   cout << i << " ";
   // }
 
-  string s = "\0"; // null string.
-  string ip;
-  cin >> ip;
-  cout << ip << " " << s << ".";
+  // string s = "\0"; // null string.
+  // string ip;
+  // cin >> ip;
+  // cout << ip << " " << s << ".";
 }

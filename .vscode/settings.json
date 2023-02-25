@@ -2,6 +2,8 @@
   "files.associations": {
     "*.html": "html",
     "vector": "cpp",
-    "ostream": "cpp"
-  }
+    "ostream": "cpp",
+    "iostream": "cpp"
+  },
+  "C_Cpp.errorSquiggles": "disabled"
 }
