@@ -7,6 +7,7 @@ using namespace std;
 #define pb push_back
 #define mii map<int, int>
 #define pii pair<int, int>
+#define vi vector<int>
 #define ff first
 #define ss second 
 #define nl '\n'
@@ -14,11 +15,16 @@ using namespace std;
 #define print2d(dp,n,m) for(int i=0;i<=n;i++){for(int j=0;j<=m;j++)cout<<dp[i][j]<<" ";cout<<nl;}
 
 
+void solve(){
+
+}
+
 int main()
 {
   IOS
   ll t;cin >> t;
   while (t--){
+    solve();
   }
 
   return 0;

@@ -19,7 +19,7 @@ int main(){
     sum += arr[j]; // consider each element in array
 
     int window = j-i + 1; // window size k
-    if(window < k){ // till windoe is equal to k
+    if(window < k){ // till window is equal to k
       j++;
     }
     if(window == k){
